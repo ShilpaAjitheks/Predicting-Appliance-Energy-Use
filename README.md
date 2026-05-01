@@ -8,3 +8,9 @@ Forecast short-term household appliance energy use to support smart-home platfor
 - **Source:** UCI Appliances Energy Prediction dataset
 - **Features:** 9 indoor temperature/humidity sensor pairs, outdoor weather (temp, humidity, pressure, wind, visibility), and timestamp
 - **Target:** Appliance energy consumption (Wh)
+
+## Approach
+**Feature engineering:** 10/20/30/60-min lag features, 1-hour rolling mean, cyclical hour/day encodings, momentum, weekend flag, and `log1p` target transform.
+**Validation:** TimeSeriesSplit (5 folds) and chronological 80/20 train/test split to preserve temporal order.
+**Models trained:** Linear Regression, Ridge, Lasso, SVR (RBF), Random Forest (500 trees), XGBoost.
+**Clustering:** KMeans (k=3) with PCA (25→11 components) to segment household energy regimes.
