@@ -23,3 +23,9 @@ Forecast short-term household appliance energy use to support smart-home platfor
 | Random Forest   | 0.5780 | 24.13    |
 | SVR             | 0.4386 | 34.61    |
 | Linear models   | ~0.31  | ~28.7    |
+
+## Requirements
+Python 3.x, pandas, numpy, scikit-learn, xgboost, matplotlib, seaborn.
+
+## Usage
+Open `Group 5 - Predicting Energy Use Notebook.ipynb` in Jupyter and run cells sequentially.
